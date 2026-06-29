@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sweetness Music — soft & dreamy pastel design system. All colors HSL. */
+
+@layer base {
+  :root {
+    --background: 30 50% 98%;
+    --foreground: 340 30% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 30% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 30% 20%;
+
+    --primary: 340 75% 72%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 25 95% 80%;
+
+    --secondary: 25 90% 92%;
+    --secondary-foreground: 340 40% 30%;
+
+    --muted: 30 40% 95%;
+    --muted-foreground: 340 15% 50%;
+
+    --accent: 280 60% 88%;
+    --accent-foreground: 280 40% 30%;
+
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 340 30% 92%;
+    --input: 340 30% 92%;
+    --ring: 340 75% 72%;
+
+    --radius: 1.25rem;
+
+    /* Brand tokens */
+    --cream: 30 60% 96%;
+    --peach: 25 95% 85%;
+    --pink: 340 80% 85%;
+    --lavender: 280 70% 90%;
+    --mint: 150 50% 88%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--peach)), hsl(var(--pink)) 50%, hsl(var(--lavender)));
+    --gradient-soft: linear-gradient(180deg, hsl(var(--cream)), hsl(30 60% 99%));
+    --gradient-button: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(var(--cream)));
+
+    --shadow-soft: 0 4px 20px -4px hsl(340 60% 75% / 0.25);
+    --shadow-glow: 0 10px 40px -10px hsl(340 75% 72% / 0.4);
+    --shadow-button: 0 6px 20px -6px hsl(340 75% 60% / 0.5);
+
+    --transition-soft: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 30 50% 98%;
+    --sidebar-foreground: 340 30% 20%;
+    --sidebar-primary: 340 75% 72%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 25 90% 92%;
+    --sidebar-accent-foreground: 340 40% 30%;
+    --sidebar-border: 340 30% 92%;
+    --sidebar-ring: 340 75% 72%;
+  }
+
+  .dark {
+    --background: 340 25% 10%;
+    --foreground: 30 50% 95%;
+    --card: 340 25% 14%;
+    --card-foreground: 30 50% 95%;
+    --popover: 340 25% 14%;
+    --popover-foreground: 30 50% 95%;
+    --primary: 340 75% 72%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 340 20% 20%;
+    --secondary-foreground: 30 50% 95%;
+    --muted: 340 20% 18%;
+    --muted-foreground: 30 20% 70%;
+    --accent: 280 40% 30%;
+    --accent-foreground: 280 60% 90%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 340 20% 22%;
+    --input: 340 20% 22%;
+    --ring: 340 75% 72%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv01";
+    background: var(--gradient-soft);
+    min-height: 100vh;
+  }
+  h1, h2, h3, h4 { @apply font-semibold tracking-tight; }
+}
+
+@layer utilities {
+  .gradient-hero { background: var(--gradient-hero); }
+  .gradient-button { background: var(--gradient-button); }
+  .gradient-card { background: var(--gradient-card); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-button { box-shadow: var(--shadow-button); }
+  .transition-soft { transition: var(--transition-soft); }
+}
+
+@keyframes pulse-sweet {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.animate-pulse-sweet { animation: pulse-sweet 2.5s ease-in-out infinite; }
+.animate-float-slow { animation: float-slow 4s ease-in-out infinite; }

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover" />
+    <title>Sweetness — Drink Less Sugar with Music</title>
+    <meta name="description" content="An app that uses music to enhance perceived sweetness so you can enjoy your bubble tea with less sugar.">
+    <meta name="author" content="Sweetness" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://sdk.scdn.co" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/placeholder.svg">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/placeholder.svg">
+    <meta property="og:title" content="Sweetness — Drink Less Sugar with Music">
+  <meta name="twitter:title" content="Sweetness — Drink Less Sugar with Music">
+  <meta property="og:description" content="An app that uses music to enhance perceived sweetness so you can enjoy your bubble tea with less sugar.">
+  <meta name="twitter:description" content="An app that uses music to enhance perceived sweetness so you can enjoy your bubble tea with less sugar.">
+</head>
+
+  <body>
+    <div id="root">
+      <div
+        style="min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:system-ui,sans-serif;color:#666"
+      >
+        Loading…
+      </div>
+    </div>
+    <script>
+      window.__spotifySdkReady = false;
+      window.onSpotifyWebPlaybackSDKReady = function () {
+        window.__spotifySdkReady = true;
+      };
+    </script>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
